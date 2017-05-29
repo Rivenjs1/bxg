@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var each = function (arr, callback) {
+            for (var i = 0, l = arr.length; i < l; i++) {
+              eval( callback(arr[i], i) );
+            }
+        }
+
+        var arr = [1, 2, 3, 4, 5, 6];
+        each( arr, function( v ){
+            console.log( v );
+            if( v == 3 ){
+                return 'break';
+            }
+        } )
+    </script>
+</body>
+
+</html>
